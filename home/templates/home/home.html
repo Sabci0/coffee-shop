@@ -1,13 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Coffee Shop</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block container %}
+
+<h1>coffee shop</h1>
+
+{% endblock %}
+
+{% block aside %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Dolorum fugiat ipsam itaque libero modi molestiae
+    mollitia nam nesciunt, nisi obcaecati placeat possimus
+    quas qui quisquam quo recusandae reiciendis repudiandae
+    sapiente sint temporibus tenetur veritatis vero? Cupiditate debitis error harum non sequi. Corporis, eaque ex officia quod sapiente sed sint? Cupiditate dolores, fuga harum id illo laborum vel voluptas voluptatum! Blanditiis, dicta ducimus in iste, iusto minus, non officiis optio quibusdam quo voluptatem voluptatibus? Dolorum eos ex exercitationem in inventore perspiciatis praesentium quo sapiente soluta ut. Animi asperiores deleniti labore libero magnam nihil porro quae suscipit vero vitae! Cum delectus eius et expedita fuga natus nisi, numquam obcaecati officia porro quia quidem quisquam repellat sequi tempore tenetur vitae voluptatibus? Consequatur et modi molestiae sed? Alias amet autem commodi dignissimos facilis ipsum nihil, quod vel voluptas voluptate. Aliquid animi aperiam aspernatur autem consequatur culpa deserunt doloremque ea error expedita harum illum inventore, ipsa labore laborum libero magni odio, placeat provident quam quas quia quibusdam quis ratione sequi tempora voluptate. Aliquid autem eius eos et exercitationem fugit illo itaque iusto magnam nisi obcaecati, quas quasi quidem reiciendis rerum temporibus tenetur ullam veniam vitae voluptatem. Adipisci dolore enim harum laboriosam laudantium quas sunt voluptates.</p>
+{% endblock %}
+ {% block script %}
+{{ block.super }}
+     <script src="{% static 'scripts/app.js' %}"></script>
+
+ {% endblock %}
