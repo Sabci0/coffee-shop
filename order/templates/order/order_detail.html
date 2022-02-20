@@ -1,7 +1,6 @@
 
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
 {% block title %}
 
 Order
@@ -12,10 +11,10 @@ Order
 
 <h1>Order Coffee</h1>
 
-    <form type="password" action="{% url 'order:create_order' %}" method="post">
+    <form type="password" action="{% url 'order:create_order_detail' %}" method="post">
     {% csrf_token %}
-        {{ form.arrors }}
-    {{ form | crispy }}
+    {{ form.as_p }}
+        {{ form | crispy }}
     <button type="submit" class="btn btn-primary">Order</button>
     </form>
 

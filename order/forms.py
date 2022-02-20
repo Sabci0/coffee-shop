@@ -1,17 +1,14 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from django.forms import PasswordInput, TextInput
-
-from order.models import User
-
-
-
+from order.models import UserDetail
 
 
 class UserForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ['name','password']
+        model = get_user_model()
+        fields = ['username','password','email']
         widgets={
             'name': TextInput(
 
@@ -24,10 +21,15 @@ class UserForm(forms.ModelForm):
 
     def save(self,commit= True):
         instance = super().save(commit=False)
-        instance.password = make_password(self.cleaned_data.get('password'))
-        instance.name = self.cleaned_data.get('name').lower()
+
+        instance.name = self.cleaned_data.get('username').lower()
 
         if commit:
             instance.save()
 
         return instance
+
+class UserDetail(forms.ModelForm):
+    class Meta:
+        model=UserDetail
+        fields ='__all__'

@@ -9,7 +9,13 @@ Home
 {% block container %}
 
 <h1>coffee shop</h1>
-
+    <ul></ul>
+{%  for user in users %}
+    <li>{{ user.username }}: password:{{ user.password }}</li>
+    {% empty %}
+    <h4>no users my friend</h4>
+    {% endfor %}
+    </ul>
 {% endblock %}
 
 {% block aside %}

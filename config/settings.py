@@ -40,11 +40,16 @@ INSTALLED_APPS = [
     #3rd party
     #local
     'home.apps.HomeConfig',
-    'order.apps.OrderConfig'
+    'order.apps.OrderConfig',
+    'crispy_forms',
+    "crispy_bootstrap5",
+    "debug_toolbar",
+
 ]
 
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,3 +135,14 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+STATIC_URL = "static/"
