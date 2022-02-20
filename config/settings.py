@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     #3rd party
     #local
     'home.apps.HomeConfig',
+    'order.apps.OrderConfig'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

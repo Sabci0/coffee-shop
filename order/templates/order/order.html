@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Order
+
+{% endblock %}
+
+{% block container %}
+
+<h1>Order Coffee</h1>
+
+    <form type="password" action="{% url 'order:create_order' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-primary">Order</button>
+    </form>
+
+{% endblock %}

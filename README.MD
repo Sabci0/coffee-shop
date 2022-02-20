@@ -13,3 +13,4 @@
 5.local urls(local router)
 6.global urls
 7.settings.py(installed_apps)
+8.Dodaj do menu .Zeby nie nusiec pisac endpoint jak w sredniowieczu
